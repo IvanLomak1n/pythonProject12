@@ -1,16 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 def index(request):
-    return HttpResponse("ПРИВЕТ ЛЮЮЮБИИИМАААЯЯЯЯ.")
+    return render(request, 'main/index.html')
 
 def about(request):
-    return HttpResponse("<h4>Страница про нас.<h4>")
+    return render(request, 'main/about.html')
 
-def contacts(request):
-    return HttpResponse("<h4>Контакты.<h4>")
-
-def blog(request):
-    return HttpResponse("<h4>Блог.<h4>")
-
-def новости(request):
-    return HttpResponse("<h4>Новости.<h4>")
