@@ -1,15 +1,34 @@
+
+{% load static %}
+
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 </head>
 <body>
+    <aside>
+        <img src="{% static 'main/img/860.jpg' %}" alt="">
+        <span class="logo">Первый сайт</span>
+        <h3>Навигация</h3>
+        <ul>
+            <li><a href=""><i class="fa-thin fa-bench-tree"></i>Главная</a></li>
+            <li><a href="">Про нас</a></li>
+            <li><a href="">Контакты</a></li>
+        </ul>
+    </aside>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
 
-    {% block content %}
-    {% endblock %}
+
 </body>
 </html>
