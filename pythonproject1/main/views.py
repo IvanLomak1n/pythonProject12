@@ -6,3 +6,5 @@ def index(request):
 def about(request):
     return render(request, 'main/about.html')
 
+def opros(request):
+    return render(request, 'main/opros.html' )
